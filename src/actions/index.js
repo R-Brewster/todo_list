@@ -1,10 +1,12 @@
 import types from '../actions/types';
+import todoData from '../helpers/dummy_data';
 
-const DEFAULT_STATE = {};
+export function getAll(){
 
-export default (state=DEFAULT_STATE, action) => {
-    switch (action.type) {
-        default:
-            return state;
+    //Make a network  request here
+
+    return{
+        type: types.GET_ALL,
+        payload: todoData
     }
 }
